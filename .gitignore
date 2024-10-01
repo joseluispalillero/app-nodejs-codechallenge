@@ -67,9 +67,19 @@ typings/
 
 # Yarn Integrity file
 .yarn-integrity
+.idea
 
 # dotenv environment variables file
-.env
+transactions-ms/.env
+transactions-ms/.idea
+transactions-ms/dist
+transactions-ms/node_modules
+
+fraud-ms/.env
+fraud-ms/.idea/
+fraud-ms/dist/
+fraud-ms/node_modules/
+
 .env.test
 
 # parcel-bundler cache (https://parceljs.org/)
@@ -102,3 +112,5 @@ dist
 
 # TernJS port file
 .tern-port
+
+zookeeper/

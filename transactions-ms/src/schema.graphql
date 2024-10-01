@@ -1,0 +1,35 @@
+type TransactionType {
+  name: String!
+}
+
+type TransactionStatus {
+  name: String!
+}
+
+type Transaction {
+  transactionExternalId: String!
+  transactionType: TransactionType!
+  transactionStatus: TransactionStatus!
+  value: Float!
+  createdAt: String!
+}
+
+"""
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+"""
+scalar DateTime
+
+type Query {
+  getTransactionByExternalId(id: String!): Transaction!
+}
+
+type Mutation {
+  createTransaction(transactionInput: TransactionInput!): Transaction!
+}
+
+input TransactionInput {
+  accountExternalIdDebit: String!
+  accountExternalIdCredit: String!
+  transferTypeId: Float!
+  value: Float!
+}
